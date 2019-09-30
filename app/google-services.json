@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "645123181025",
+    "firebase_url": "https://quickshop-1641f.firebaseio.com",
+    "project_id": "quickshop-1641f",
+    "storage_bucket": "quickshop-1641f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645123181025:android:ce065fdb3afc0f18",
+        "android_client_info": {
+          "package_name": "com.example.shailendra.quickshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645123181025-0sb4209ofe00eo4cco3cqa590g9bpijh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6yrkNTKndVYMhdKdvo38JmBqwreQPylg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/x_DrawerLayout"
+    tools:context=".Activity1">
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/x_Nav_View"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity ="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_header_item"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/x_ToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:scaleType="center"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
+            app:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="QuickShop"
+            app:titleMarginStart="85dp"
+            app:titleTextColor="#ffffff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+         <!-- ## Promotion of the Shop... Item   -->
+                    <ViewFlipper
+                        android:id="@+id/x_ViewFlipperImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/home_promote_shape"
+                        android:gravity="center" />
+
+         <!-- ## Offer View... Item  -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp">
+
+                            <Button
+                                android:id="@+id/x_OffBtn1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:text="Offer"
+                                />
+                            <Button
+                                android:id="@+id/x_OffBtn2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:text="Offer"
+                                />
+                            <Button
+                                android:id="@+id/x_OffBtn3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:text="Offer"
+                                />
+                            <Button
+                                android:id="@+id/x_OffBtn4"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:text="View More"
+                                />
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+         <!-- ## Mobiles and Electronics ... Item  -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile and Electronics..."
+                            android:textColor="#000"
+                            android:textSize="20dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/x_ShopId1"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="100dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop N0. 1"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20dp"/>
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/x_ShopId2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop N0. 2"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20dp"/>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/x_ShopId3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop N0. 3"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20dp"/>
+
+                            </RelativeLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="View More..."
+                                android:gravity="right"
+                                android:textColor="#000"
+                                android:textSize="20dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+     <!-- ## Clothes and Fashion... Item   -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Clothes and Fashion..."
+                            android:textColor="#000"
+                            android:textSize="20dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/x_ShopId21"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="100dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop N0. 1"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20dp"/>
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/x_ShopId22"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop N0. 2"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20dp"/>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/x_ShopId23"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shop N0. 3"
+                                    android:gravity="center"
+                                    android:textColor="#000"
+                                    android:textSize="20dp"/>
+
+                            </RelativeLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="View More..."
+                                android:gravity="right"
+                                android:textColor="#000"
+                                android:textSize="20dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+     <!-- ### End of Home Linear Layout Under Vertical ScrollView... -->
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

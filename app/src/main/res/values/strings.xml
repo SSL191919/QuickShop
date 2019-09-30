@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Quick Shop</string>
+    <string name="navigation_Drawer_Open">Open Navigation Bar</string>
+    <string name="navigation_Drawer_close">Close Navigation Bar</string>
+
+    <string-array name="sub_selected">
+        <item>[BE-101] Engineering Chemistry</item>
+        <item>[BE-102] Engineering Mathematics</item>
+        <item>[BE-103] Communication Skills</item>
+        <item>[BE-104] Basic Electricals and Electronics Engg.</item>
+        <item>[BE-105] Engineering Graphics</item>
+        <item>[BE-201] Engineering Physics</item>
+        <item>[BE-202] Energy, Environment, Ecology and Society</item>
+        <item>[BE-203] Basic Mechanical Engg.</item>
+        <item>[BE-204] Basic Civil Engg. and Engg. Mechanics</item>
+        <item>[BE-205] Basic Computer Engg.</item>
+
+    </string-array>
+    <string name="title_activity_ret_registration">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="order_list">Order</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerLogin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer LogIn"
+        android:gravity="center"
+        android:fontFamily="serif"
+        android:textSize="25dp"
+        android:textColor="#0a0d38"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:id="@+id/wText1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/wText1"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/wUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:hint="Enter Your Name"
+            android:paddingLeft="15dp"
+            />
+        <EditText
+            android:id="@+id/wUserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:hint="Enter Your Phone no."
+            android:digits="0123456789"
+            android:inputType="phone"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:id="@+id/wUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:hint="Enter Your Email"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/wUserPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:hint="Enter Your Password"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/wUserPass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:hint="Re-Enter Your Password"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/wRegisterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register here"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/wLogInBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LogIn here"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/wForgrtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="forget Your Password"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#fc0000"/>
+
+        <TextView
+            android:id="@+id/wNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New User? Register here..."
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#063e00"/>
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Code here"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
