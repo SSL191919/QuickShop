@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/drawer_Image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profile_placeholder"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="2dp"/>
+
     <TextView
-        android:id="@+id/x_userName"
+        android:id="@+id/drawer_UserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#060249"
+        android:textColor="#FFFFFF"
         android:paddingTop="8dp"
-        android:text="TenQue App"
+        android:paddingLeft="2dp"
+        android:textStyle="bold"
+        android:text="First Order"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"/>
     <TextView
-        android:id="@+id/x_userEmail"
+        android:id="@+id/drawer_userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#7c006c"
-        android:text="info@tenque.in"/>
+        android:textColor="#F3E2E2"
+        android:paddingTop="4dp"
+        android:paddingLeft="2dp"
+        android:text="info@firstorder.in"/>
 
 </LinearLayout>

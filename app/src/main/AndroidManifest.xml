@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.shailendra.quickshop">
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -10,23 +10,34 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:appComponentFactory="androidx"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activity1">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".userprofile.DeleteUserActivity"></activity>
+        <activity android:name=".userprofile.AccountSettingActivity" />
+        <activity android:name=".communicate.CommunicateActivity" />
+        <activity android:name=".notifications.NotificationActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".buyprocess.BuyNowActivity" />
+        <activity android:name=".userprofile.RegisterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".CustomerLogin">
+        <activity android:name=".categoryItemClass.CategoriesItemsViewActivity" />
+        <activity android:name=".MainActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -35,17 +46,20 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".retailerdata.RetHomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".retailerdata.RetRegisterActivity">
-
-        </activity>
-        <activity android:name=".W_Example_Recycler" />
+        <activity android:name=".activityforitems.ViewAllActivity" />
+        <activity android:name=".myorder.OrderDetailsActivity" />
+        <activity android:name=".userprofile.AddAddressActivity" />
+        <activity android:name=".userprofile.MyAddressesActivity" />
+        <activity android:name=".buyprocess.ConformOrderActivity" />
+        <activity android:name=".productdetails.ProductDetails" />
+        <activity android:name=".categoryItemClass.CatTypeMobileRecycler" /> <!-- Paytm Integration -->
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/paytmTheme"
+            tools:replace="android:theme" />
+        <activity android:name=".paytm.CheckSum" />
     </application>
 
 </manifest>
