@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:elevation="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageButton
+        android:id="@+id/my_order_item_img"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/squre_image_placeholder" />
+
+    <TextView
+        android:id="@+id/my_order_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:maxLines="3"
+        android:padding="2dp"
+        android:text="Saraswati Mata Sticker | Mobile and Laptop Background Wallpaper"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/my_order_item_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/my_order_item_deliverydate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Delivered on 2 Dec. 2019\n (Monday)"
+        android:maxLines="2"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/my_order_indicater"
+        app:layout_constraintEnd_toEndOf="@+id/my_order_item_name"
+        app:layout_constraintStart_toEndOf="@+id/my_order_indicater"
+        app:layout_constraintTop_toTopOf="@+id/my_order_indicater" />
+
+    <TextView
+        android:id="@+id/my_order_indicater"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_white_btn"
+        android:backgroundTint="@color/colorGreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_order_item_name"
+        app:srcCompat="@drawable/dot_selected" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

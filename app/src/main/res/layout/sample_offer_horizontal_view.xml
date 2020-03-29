@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ## Offer View... Item  -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/x_OffBtn1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="Offer"
+                />
+            <Button
+                android:id="@+id/x_OffBtn2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="Offer"
+                />
+            <Button
+                android:id="@+id/x_OffBtn3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="Offer"
+                />
+            <Button
+                android:id="@+id/x_OffBtn4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="View More"
+                />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</android.support.constraint.ConstraintLayout>

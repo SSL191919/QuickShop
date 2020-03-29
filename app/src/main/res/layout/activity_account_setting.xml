@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    tools:context=".userprofile.AccountSettingActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--     For Profile Image Update..       -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorPrimary">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfilePhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:elevation="4dp"
+                    android:src="@drawable/profile_placeholder"
+                    app:civ_border_color="@color/colorWhite"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/add_image_imgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/round_white_btn"
+                    android:elevation="6dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/userProfilePhoto"
+                    app:layout_constraintEnd_toEndOf="@+id/userProfilePhoto"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/update_user_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/userProfilePhoto"
+                    app:layout_constraintStart_toStartOf="@+id/userProfilePhoto">
+
+                    <TextView
+                        android:id="@+id/update_image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/one_dp_border_back"
+                        android:backgroundTint="@color/colorWhite"
+                        android:padding="6dp"
+                        android:text="Update Photo"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/remove_image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/one_dp_border_back"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:padding="6dp"
+                        android:text="Delete Photo"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecondary"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/upload_user_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/userProfilePhoto"
+                    app:layout_constraintStart_toStartOf="@+id/userProfilePhoto">
+
+                    <TextView
+                        android:id="@+id/upload_image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/one_dp_border_back"
+                        android:backgroundTint="@color/colorWhite"
+                        android:padding="6dp"
+                        android:text="Upload"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cancel_image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/one_dp_border_back"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:padding="6dp"
+                        android:text="Cancel"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecondary"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--     For Profile name Update..       -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorPrimary">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="visible"
+                    android:id="@+id/show_name_mobile_constLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorRecyclerBack">
+
+                    <ImageButton
+                        android:id="@+id/update_name_mobile_pencilImgBtn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/round_white_btn"
+                        android:elevation="8dp"
+                        android:tint="@color/colorPrimary"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:padding="8dp"
+                            android:text="Name "
+                            android:textColor="@color/colorSecondary"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/user_name_update_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+                            android:text="Quick Shop"
+                            android:textColor="@color/colorSecondary"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:padding="8dp"
+                            android:text="Mobile "
+                            android:textColor="@color/colorSecondary"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/user_mobile_update_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+                            android:text="1234567890"
+                            android:textColor="@color/colorSecondary"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/update_name_mobile_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorSecondary">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:padding="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text=" Update Name and Mobile"/>
+
+                    <EditText
+                        android:id="@+id/user_name_update_edtTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:hint="Enter Your Name"
+                        android:textColorHint="@color/colorGray"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/colorWhite"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <EditText
+                        android:id="@+id/user_mobile_update_edtTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:hint="Enter Mobile Number"
+                        android:textColorHint="@color/colorGray"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/name_mobile_update_saveBtn"
+                            android:layout_marginTop="8dp"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Save"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorGreen"/>
+                        <Button
+                            android:id="@+id/name_mobile_update_cancelBtn"
+                            android:layout_marginTop="8dp"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cancel"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--     For Email address Update..       -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="4dp">
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/show_email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Email "
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:textColor="@color/colorSecondary" />
+                    <TextView
+                        android:id="@+id/user_email_update_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="info@gmail.com"
+                        android:textSize="16dp"
+                        android:padding="8dp"
+                        android:maxLines="1"
+                        android:textColor="@color/colorSecondary" />
+                    <ImageButton
+                        android:visibility="visible"
+                        android:id="@+id/update_email_pencilImgBtn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:elevation="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary"
+                        android:background="@drawable/round_white_btn"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/update_email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorSecondary"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:padding="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Enter New Email to update your email"/>
+                    <EditText
+                        android:id="@+id/user_email_update_editTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="Enter New Email"
+                        android:textSize="16dp"
+                        android:textColorHint="@color/colorGray"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/ic_email_black_24dp"
+                        android:textColor="@color/colorWhite" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/email_update_save_btn"
+                            android:layout_marginTop="8dp"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Update"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorGreen"/>
+                        <Button
+                            android:id="@+id/email_update_cancel_btn"
+                            android:layout_marginTop="8dp"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cancel"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/update_email_enterPass_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorSecondary"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:padding="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Enter Password to update your email"/>
+
+                    <EditText
+                        android:id="@+id/update_email_enterPass_editTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:inputType="textPassword"
+                        android:hint="Enter Password"
+                        android:textColorHint="@color/colorGray"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <Button
+                        android:id="@+id/update_email_Ok_btn"
+                        android:layout_marginTop="8dp"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/colorWhite"
+                        android:textColor="@color/colorGreen"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--     Change Your Password ...       -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary">
+                <Button
+                    android:visibility="visible"
+                    android:id="@+id/change_password_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:text="Change Your Password"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/one_dp_border_back"
+                    android:backgroundTint="@color/colorWhite"/>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/change_pass_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorSecondary"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:padding="12dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Enter Old Password And new Password"/>
+
+                    <EditText
+                        android:id="@+id/old_pass_update_edtTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:textSize="16dp"
+                        android:inputType="textPassword"
+                        android:hint="Enter Old Password"
+                        android:textColorHint="@color/colorGray"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:textColor="@color/colorWhite"/>
+
+                    <EditText
+                        android:id="@+id/new_pass_update_edtTxt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:textSize="16dp"
+                        android:inputType="textPassword"
+                        android:hint="Enter New Password"
+                        android:textColorHint="@color/colorGray"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <EditText
+                        android:id="@+id/new_pass_update_edtTxt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:maxLines="1"
+                        android:textSize="16dp"
+                        android:inputType="textPassword"
+                        android:hint=" Re - Enter New Password"
+                        android:textColorHint="@color/colorGray"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/change_pass_save_btn"
+                            android:layout_marginTop="8dp"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Update"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorGreen"/>
+                        <Button
+                            android:id="@+id/change_pass_cancel_btn"
+                            android:layout_marginTop="8dp"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cancel"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

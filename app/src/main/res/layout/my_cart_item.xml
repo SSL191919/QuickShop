@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp"
+    android:backgroundTint="@color/colorWhite"
+    android:background="@drawable/x_ractangle_layout"
+    android:elevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/squre_image_placeholder" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="8dp"
+        android:padding="2dp"
+        android:maxLines="3"
+        android:text="Saraswati maata Skicker for mobile and laptop back | back sticker"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:text="$299/-"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <TextView
+        android:id="@+id/product_cut_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="$315/-"
+        android:textColor="@color/colorGray"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/product_price"
+        app:layout_constraintStart_toStartOf="@+id/product_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_price" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="@+id/product_cut_price"
+        app:layout_constraintEnd_toEndOf="@+id/product_cut_price"
+        app:layout_constraintStart_toStartOf="@+id/product_cut_price"
+        app:layout_constraintTop_toTopOf="@+id/product_cut_price" />
+
+    <TextView
+        android:id="@+id/item_quntity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Qty : 1"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/x_ractangle_layout"
+        android:backgroundTint="#F44336"
+        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/product_price"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="@+id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <TextView
+        android:id="@+id/remove_item_from_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_delete_black_24dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:drawableTint="@color/colorRed"
+        android:drawablePadding="4dp"
+        android:paddingLeft="4dp"
+        android:layout_marginBottom="8dp"
+        android:paddingRight="4dp"
+        android:textColor="#302B2B"
+        android:text="Remove from Cart"
+        app:layout_constraintBottom_toBottomOf="@+id/product_image"
+        app:layout_constraintStart_toStartOf="@+id/item_quntity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:elevation="6dp"
+    android:background="@color/colorWhite">
+
+
+    <ImageView
+        android:id="@+id/wish_item_image"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/squre_image_placeholder" />
+
+    <TextView
+        android:id="@+id/wish_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:maxLines="3"
+        android:padding="2dp"
+        android:text="Saraswati Mata Sticker | Mobile and Laptop Background Wallpaper"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wish_item_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wish_item_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:padding="2dp"
+        android:text="$ 4,999/-"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintStart_toStartOf="@+id/wish_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/wish_item_name" />
+
+    <TextView
+        android:id="@+id/wish_item_cut_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="$ 5,499/-"
+        app:layout_constraintBottom_toBottomOf="@+id/wish_item_price"
+        app:layout_constraintStart_toEndOf="@+id/wish_item_price" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorRecyclerBack"
+        app:layout_constraintBottom_toBottomOf="@+id/wish_item_cut_price"
+        app:layout_constraintEnd_toEndOf="@+id/wish_item_cut_price"
+        app:layout_constraintStart_toStartOf="@+id/wish_item_cut_price"
+        app:layout_constraintTop_toTopOf="@+id/wish_item_cut_price" />
+
+    <TextView
+        android:id="@+id/wish_item_off_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="20 % Off"
+        app:layout_constraintBottom_toBottomOf="@+id/wish_item_cut_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wish_item_cut_price" />
+
+    <LinearLayout
+        android:id="@+id/buy_delete_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wish_item_image"
+        app:layout_goneMarginBottom="12dp">
+
+        <Button
+            android:id="@+id/wish_item_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorGreen"
+            android:gravity="center"
+            android:text="Buy Now"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/wish_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="Remove"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cod_text_show"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreen"
+        android:text="Cash on Delivery Available"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wish_item_image"
+        app:layout_goneMarginBottom="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

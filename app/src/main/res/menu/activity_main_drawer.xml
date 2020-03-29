@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/menu_my_acount"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:iconTint="@color/colorBlack"
+            android:title="My Account" />
+        <item
+            android:id="@+id/menu_my_order"
+            android:icon="@drawable/ic_local_mall_black_24dp"
+            android:iconTint="@color/colorBlack"
+            android:title="My Order" />
+        <item
+            android:id="@+id/menu_my_cart"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:iconTint="@color/colorBlack"
+            android:title="My Cart" />
+        <item
+            android:id="@+id/menu_my_wish_list"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:iconTint="@color/colorBlack"
+            android:title="My WishList" />
+        <item
+            android:id="@+id/menu_log_out"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:iconTint="@color/colorBlack"
+            android:title="LogOut" />
+
+
+    </group>
+    <item
+        android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/menu_help"
+                android:title="Help"
+                android:iconTint="@color/colorBlack"
+                android:icon="@drawable/ic_help_black_24dp" />
+            <item
+                android:id="@+id/menu_report_problem"
+                android:title="Report a Problem"
+                android:iconTint="@color/colorBlack"
+                android:icon="@drawable/ic_report_problem_black_24dp" />
+            <item
+                android:id="@+id/menu_rate_us"
+                android:title="Rate/Review"
+                android:iconTint="@color/colorBlack"
+                android:icon="@drawable/ic_thumb_up_black_24dp" />
+
+        </menu>
+    </item>
+
+
+</menu>

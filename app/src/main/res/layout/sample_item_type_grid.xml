@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ## Mobiles and Electronics ... Item  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile and Electronics..."
+            android:textColor="#000"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/x_ShopId1"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop N0. 1"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20dp"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/x_ShopId2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop N0. 2"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20dp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/x_ShopId3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop N0. 3"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20dp"/>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View More..."
+                android:gravity="right"
+                android:textColor="#000"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
