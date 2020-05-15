@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#3F51B5</color>
+
+<!--    First Order Color... -->
+    <color name="colorPrimary">#047507</color>
+    <color name="colorPrimaryDark">#3D7003</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorViewAllBtn">#013a4b</color>
     <color name="colorSecondary">#013a4b</color>

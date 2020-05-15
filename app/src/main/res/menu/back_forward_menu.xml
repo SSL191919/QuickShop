@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/back_menu"
+        android:icon="@drawable/ic_arrow_back_black_24dp"
+        android:title="Back"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/refresh_web_menu"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:title="Refresh"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/forward_menu"
+        android:icon="@drawable/ic_arrow_forward_black_24dp"
+        android:title="Forward"
+        app:showAsAction="always" />
+
+
+<!--    <item-->
+<!--        android:id="@+id/feedbakc_menu"-->
+<!--        android:title="Feedback"-->
+<!--        android:icon="@drawable/ic_feedback_black_24dp"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/share_menu"-->
+<!--        android:icon="@drawable/ic_share_black_24dp"-->
+<!--        android:title="Share"/>-->
+
+</menu>

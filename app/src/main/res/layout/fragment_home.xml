@@ -14,6 +14,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+<!--        Select Location Content... -->
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawableTint="@color/colorPrimary"
+                android:drawablePadding="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Your Location : " />
+            <TextView
+                android:id="@+id/location_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:drawableTint="@color/colorSecondary"
+                android:drawablePadding="8dp"
+                android:textColor="@color/colorSecondary"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Patna, Aazad Nagar Central Patna, Bihar" />
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/category_icon_recycler"
             android:layout_width="match_parent"
@@ -21,7 +64,7 @@
             android:background="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 <!--        app:layout_scrollFlags="scroll|enterAlways|snap"-->
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

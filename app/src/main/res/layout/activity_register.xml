@@ -13,19 +13,116 @@
         android:id="@+id/register_frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/first_welcome_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="180dp"
             android:layout_gravity="center"
             app:srcCompat="@mipmap/logo" />
 
     </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/check_user_linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            app:srcCompat="@mipmap/logo" />
+
+        <LinearLayout
+            android:id="@+id/city_spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:background="@drawable/one_dp_border_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTint="@color/colorSecondary"
+                android:drawablePadding="4dp"
+                android:drawableLeft="@drawable/ic_location_city_black_24dp"
+                android:textSize="18dp"
+                android:textColor="@color/colorSecondary"
+                android:text="Select Your City :"/>
+            <Spinner
+                android:id="@+id/city_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorSecondary"
+                android:textAlignment="center"
+                android:tooltipText="Select City" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/area_spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:background="@drawable/one_dp_border_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTint="@color/colorSecondary"
+                android:drawablePadding="4dp"
+                android:drawableLeft="@drawable/ic_location_city_black_24dp"
+                android:textSize="18dp"
+                android:textColor="@color/colorSecondary"
+                android:text="Select Your Area :"/>
+            <Spinner
+                android:id="@+id/area_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorSecondary"
+                android:textAlignment="center"
+                android:tooltipText="Select City" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/colorWhite"
+            android:text="Continue    &gt; &gt;" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

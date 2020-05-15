@@ -79,7 +79,7 @@
                 android:text="Order Date : 20/01/2020 (Tuesday)"
                 android:textColor="@color/colorSecondary" />
 
-            <include layout="@layout/order_details_tracking_layout"/>
+<!--            <include layout="@layout/order_details_tracking_layout"/>-->
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -42,14 +42,14 @@
         <menu>
             <item
                 android:id="@+id/menu_help"
-                android:title="Help"
+                android:title="Help &amp; Policy"
                 android:iconTint="@color/colorBlack"
                 android:icon="@drawable/ic_help_black_24dp" />
             <item
                 android:id="@+id/menu_report_problem"
-                android:title="Report a Problem"
+                android:title="Send A Query"
                 android:iconTint="@color/colorBlack"
-                android:icon="@drawable/ic_report_problem_black_24dp" />
+                android:icon="@drawable/ic_send_black_24dp" />
             <item
                 android:id="@+id/menu_rate_us"
                 android:title="Rate/Review"

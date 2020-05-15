@@ -118,7 +118,7 @@
             android:gravity="center"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            android:text="Qty : 1"
+            android:text="Qty : 1 Piece"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toStartOf="@+id/product_price"
